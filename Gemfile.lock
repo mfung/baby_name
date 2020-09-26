@@ -95,6 +95,7 @@ GEM
       descendants_tracker (~> 0.0.1)
     colorize (0.8.1)
     concurrent-ruby (1.1.7)
+    connection_pool (2.2.3)
     crack (0.4.4)
     crass (1.0.6)
     descendants_tracker (0.0.4)
@@ -201,6 +202,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.2)
     reek (6.0.1)
       kwalify (~> 0.7.0)
       parser (>= 2.5.0.0, < 2.8, != 2.5.1.1)
@@ -270,6 +272,10 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     sexp_processor (4.15.1)
+    sidekiq (6.1.2)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
     simplecov (0.19.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -360,6 +366,7 @@ DEPENDENCIES
   rubycritic
   sass-rails (>= 6)
   selenium-webdriver
+  sidekiq
   simplecov
   simplecov-bamboo
   simplecov-summary
