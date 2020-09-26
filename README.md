@@ -1,24 +1,19 @@
-# README
+# Baby Names
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was made to utilize data from the USA SSN.
 
-Things you may want to cover:
+# Testing
 
-* Ruby version
+rails test
 
-* System dependencies
+# Ruby version:
 
-* Configuration
+2.7.1
 
-* Database creation
+# Rails version:
 
-* Database initialization
+6.0.3.3
 
-* How to run the test suite
+# System dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ElasticSearch, PostgreSQL
