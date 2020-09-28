@@ -1,6 +1,6 @@
 class ImportDataFilesController < ApplicationController
   def index
-    @data_files = DataFile.order(:name).all
+    @data_files = DataFile.order(name: :desc).all
   end
 
   def new
