@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to 'Baby Names', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="<%= active_link('/', 'nav-item') %>">
+        <%= link_to 'Home', root_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_link('/names', 'nav-item') %>">
+        <%= link_to 'Names', names_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_link('/import_data_files', 'nav-item') %>">
+        <%= link_to 'Import Data', import_data_files_path, class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>
