@@ -4,10 +4,27 @@
       "/Users/mfung/Documents/Workspace/baby_names/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          1,
+          6,
+          null,
+          6,
+          null,
           null
         ]
       },
       "/Users/mfung/Documents/Workspace/baby_names/app/helpers/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/mfung/Documents/Workspace/baby_names/app/helpers/import_data_files_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/mfung/Documents/Workspace/baby_names/app/helpers/names_helper.rb": {
         "lines": [
           1,
           null
@@ -19,6 +36,10 @@
           1,
           null,
           1,
+          0,
+          null,
+          0,
+          0,
           null,
           null,
           null
@@ -38,6 +59,7 @@
       "/Users/mfung/Documents/Workspace/baby_names/app/models/data_file.rb": {
         "lines": [
           1,
+          1,
           null
         ]
       },
@@ -51,12 +73,62 @@
       "/Users/mfung/Documents/Workspace/baby_names/app/models/name.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
           null
         ]
       },
       "/Users/mfung/Documents/Workspace/baby_names/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/mfung/Documents/Workspace/baby_names/app/controllers/import_data_files_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/mfung/Documents/Workspace/baby_names/app/controllers/names_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -70,8 +142,40 @@
         "branches": {
         }
       },
+      "/Users/mfung/Documents/Workspace/baby_names/app/service/dashboard.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/mfung/Documents/Workspace/baby_names/app/controllers/home_controller.rb": {
         "lines": [
+          0,
           0,
           0,
           0,
@@ -101,6 +205,6 @@
         }
       }
     },
-    "timestamp": 1601158479
+    "timestamp": 1601314851
   }
 }
