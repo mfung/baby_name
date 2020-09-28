@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_213848) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_data_files_on_name", unique: true
   end
 
   create_table "names", force: :cascade do |t|
@@ -48,8 +49,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_213848) do
     t.integer "amount"
     t.integer "rank"
     t.integer "year"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name", "gender", "year"], name: "index_names_on_name_and_gender_and_year", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

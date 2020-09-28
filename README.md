@@ -4,7 +4,7 @@ This app was made to utilize data from the USA SSN.
 
 # Testing
 
-rails test
+rails spec
 
 # Ruby version:
 

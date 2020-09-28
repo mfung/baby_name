@@ -1,0 +1,27 @@
+<%= form_with(model: data_file, url: import_data_files_path, local: true) do |form| %>
+<% if data_file.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(data_file.errors.count, "error") %> prohibited this data_file from being saved:</h2>
+
+  <ul>
+    <% data_file.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+
+<div class="field">
+  <%= form.label :file %>
+  <%= form.file_field :csv_file %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+<% end %>

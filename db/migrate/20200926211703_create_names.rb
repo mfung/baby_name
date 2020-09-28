@@ -6,8 +6,8 @@ class CreateNames < ActiveRecord::Migration[6.0]
       t.integer :amount
       t.integer :rank
       t.integer :year
-
-      t.timestamps
     end
+
+    add_index :names, [:name, :gender, :year], unique: true
   end
 end

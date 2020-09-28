@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Attached</th>
+      <th>Download</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_files.each do |data_file| %>
+    <tr>
+      <td><%= data_file.name %></td>
+      <td><%= data_file.csv_file.attached? %></td>
+      <td><%= link_to 'Download', data_file.csv_file -%>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Import Data File', new_import_data_file_path %>

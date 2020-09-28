@@ -5,5 +5,7 @@ class CreateDataFiles < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    add_index :data_files, :name, unique: true
   end
 end
