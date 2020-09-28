@@ -9,8 +9,14 @@
       <li class="<%= active_link('/', 'nav-item') %>">
         <%= link_to 'Home', root_path, class: 'nav-link' %>
       </li>
-      <li class="<%= active_link('/names', 'nav-item') %>">
-        <%= link_to 'Names', names_path, class: 'nav-link' %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Names
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'List', names_path, class: 'dropdown-item' %>
+          <%= link_to 'Top 100 By Year', '#', class: 'dropdown-item' %>
+        </div>
       </li>
       <li class="<%= active_link('/import_data_files', 'nav-item') %>">
         <%= link_to 'Import Data', import_data_files_path, class: 'nav-link' %>

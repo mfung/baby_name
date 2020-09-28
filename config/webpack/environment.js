@@ -1,6 +1,5 @@
 const { environment } = require("@rails/webpacker");
 const webpack = require("webpack");
-const customConfig = require("./custom");
 
 environment.plugins.prepend(
   "Provide",
@@ -9,9 +8,7 @@ environment.plugins.prepend(
     jQuery: "jquery/src/jquery",
     "window.jQuery": "jquery",
     Popper: ["popper.js", "default"],
-    _: "underscore",
   })
 );
-environment.config.merge(customConfig);
 
 module.exports = environment;
