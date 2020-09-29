@@ -1,2 +1,107 @@
-<h1>Names#show</h1>
+<h1><%= @names.first.name -%></h1>
 <p>Find me in app/views/names/show.html.erb</p>
+
+<canvas id="totalGirlsAmount" width="400" height="200"></canvas>
+<script>
+Chart.Legend.prototype.afterFit = function() {
+  this.height = this.height + 20;
+};
+
+function addCommas(nStr)
+{
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
+var ctx = document.getElementById('totalGirlsAmount').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: <%= @labels -%>,
+        datasets: [{
+            label: '# of Girls',
+            data: <%= @female_name_data.to_s -%>,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+      scales: { yAxes: [{ ticks: { beginAtZero: true } }] },
+      tooltips: {
+      enabled: false
+      },
+      hover: {
+          animationDuration: 0
+      },
+      animation: {
+      duration: 1,
+      onComplete: function () {
+        var chartInstance = this.chart,
+            ctx = chartInstance.ctx;
+        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+
+        this.data.datasets.forEach(function (dataset, i) {
+          var meta = chartInstance.controller.getDatasetMeta(i);
+          meta.data.forEach(function (bar, index) {
+            var data = dataset.data[index];
+            ctx.fillText(addCommas(data), bar._model.x, bar._model.y - 5);
+          });
+        });
+      }
+    }
+  }
+});
+</script>
+<br /><br />
+<canvas id="totalBoysAmount" width="400" height="200"></canvas>
+<script>
+var ctx = document.getElementById('totalBoysAmount').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: <%= @labels -%>,
+        datasets: [{
+            label: '# of Boys',
+            data: <%= @male_name_data.to_s -%>,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+      scales: { yAxes: [{ ticks: { beginAtZero: true } }] },
+      tooltips: {
+      enabled: false
+      },
+      hover: {
+          animationDuration: 0
+      },
+      animation: {
+      duration: 1,
+      onComplete: function () {
+        var chartInstance = this.chart,
+            ctx = chartInstance.ctx;
+        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+
+        this.data.datasets.forEach(function (dataset, i) {
+          var meta = chartInstance.controller.getDatasetMeta(i);
+          meta.data.forEach(function (bar, index) {
+            var data = dataset.data[index];
+            ctx.fillText(addCommas(data), bar._model.x, bar._model.y - 5);
+          });
+        });
+      }
+    }
+  }
+});
+</script>
