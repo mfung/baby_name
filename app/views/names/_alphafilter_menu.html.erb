@@ -1,0 +1,26 @@
+<%
+  alpha_hash = ('A'..'Z').inject({}) { |hsh, letter| hsh[letter.to_sym] = names_path(name: letter); hsh }
+  alpha_hash = Hash[:ALL, names_path].merge(alpha_hash)
+%>
+
+<div class="alpha-menu">
+  <nav>
+    <ul class="pagination">
+      <% alpha_hash.each do |key, value| %>
+        <% if params[:name] == key.to_s %>
+          <li class="active page-item">
+            <%= link_to key.to_s, value, class: 'page-link' -%>
+          </li>
+        <% elsif params[:name].blank? && key.to_s == 'ALL' %>
+          <li class="active page-item">
+            <%= link_to key.to_s, value, class: 'page-link' -%>
+          </li>
+        <% else %>
+          <li class="page-item">
+            <%= link_to key.to_s, value, class: 'page-link' -%>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
+</div>
