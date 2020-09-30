@@ -1,6 +1,6 @@
 class NamesController < ApplicationController
   def index
-    @pagy, @names = pagy(Name.select('DISTINCT name, gender').order(name: :asc))
+    @pagy, @names = pagy(Name.filter(params.slice(:name)).select('DISTINCT name, gender').order(name: :asc))
   end
 
   def show

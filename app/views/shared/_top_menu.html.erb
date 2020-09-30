@@ -22,5 +22,10 @@
         <%= link_to 'Import Data', import_data_files_path, class: 'nav-link' %>
       </li>
     </ul>
+
+    <%= form_tag(names_path, class: 'form-inline my-2 my-lg-0', method: :get) do %>
+      <%= text_field_tag(:name, params[:name], class: 'form-control mr-sm-2') -%>
+      <%= submit_tag("Search Names", class: 'btn btn-outline-success my-2 my-sm-0') -%>
+    <% end %>
   </div>
 </nav>
