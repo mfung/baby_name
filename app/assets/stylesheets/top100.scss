@@ -1,3 +1,37 @@
 // Place all the styles related to the Top100 controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.gender .card-header {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  vertical-align: middle;
+
+}
+
+.pink {
+  background-color: rgba(255, 93, 143, .55);
+
+  a:link, a:visited {
+    font-weight: bold;
+    color: rgb(153, 48, 87);
+  }
+
+  a:hover {
+    color: rgb(255, 243, 120);
+  }
+}
+
+.blue {
+  background-color: rgba(33, 158, 188, .55);
+
+  a:link, a:visited {
+    font-weight: bold;
+    color: rgb(10, 70, 82);
+  }
+
+  a:hover {
+    color: rgb(184, 51, 106);
+  }
+}

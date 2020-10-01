@@ -1,2 +1,41 @@
 <h1>100 Top Ranked Baby Names</h1>
 <p class="text-muted">For the year of <b><%= params[:year] -%></b></p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card pink gender">
+      <div class="card-header">Female <i class="float-right fa fa-female fa-2x"></i></div>
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render partial: 'name', collection: @female_names -%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card blue gender">
+      <div class="card-header">Male <i class="float-right fa fa-male fa-2x"></i></div>
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render partial: 'name', collection: @male_names -%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
