@@ -1,7 +1,6 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  get 'top100/show'
   resources :import_data_files, only: %i[index new create]
 
   resources :names, only: %i[index show], param: :name

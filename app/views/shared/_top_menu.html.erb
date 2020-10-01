@@ -15,7 +15,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to 'List', names_path, class: 'dropdown-item' %>
-          <%= link_to 'Top 100 By Year', '#', class: 'dropdown-item' %>
+          <%= link_to 'Top 100 By Year', top100_path(year: Time.zone.now.year - 1), class: 'dropdown-item' %>
         </div>
       </li>
       <li class="<%= active_link('/import_data_files', 'nav-item') %>">

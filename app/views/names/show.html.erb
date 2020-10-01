@@ -1,5 +1,4 @@
 <h1><%= @names.first.name -%></h1>
-<p>Find me in app/views/names/show.html.erb</p>
 
 <canvas id="totalGirlsAmount" width="400" height="200"></canvas>
 <script>
@@ -105,3 +104,19 @@ var myChart = new Chart(ctx, {
   }
 });
 </script>
+
+<h3 class="mt-5">Data</h3>
+
+<table class="table table-striped table-hover table-condensed table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Year</th>
+      <th>Rank</th>
+      <th>Gender</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'data_row', collection: @names -%>
+  </tbody>
+</table>
