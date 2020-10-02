@@ -17,3 +17,11 @@ import "chart.js/dist/Chart.min.js";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(document).on('turbolinks:load', function() {
+  $('#top100-year-select').change(function(e){
+    var selectedLocation = $(this).find('option:selected').val();
+
+    window.location.href = selectedLocation;
+  });
+});
